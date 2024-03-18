@@ -11,11 +11,17 @@ function createWindow() {
         transparent: true,
         backgroundMaterial: 'acrylic',
         resizable: true,
-        //titleBarStyle: 'hidden'
+        //titleBarStyle: 'hidden',
+        //titleBarOverlay: {
+        //    color: '#2f3241b2',
+        //    symbolColor: '#74b1be',
+        //    height: 30
+        //},
+        autoHideMenuBar: true,
     });
 
     win.loadFile('index.html');
-    // win.webContents.openDevTools();
+    win.webContents.openDevTools();
     // After creating the window in your main process
     win.once('ready-to-show', () => {
         win.show();
