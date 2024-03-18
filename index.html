@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Electron Text Editor</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+      .current-line {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: JetBrainsMono Nerd Font;
+        background-color: rgba(0, 0, 0, 0.1);
+        height: calc(100vh);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="editor" contenteditable="true">
+      <div>&nbsp;</div>
+    </div>
+    <script src="renderer.js"></script>
+  </body>
+</html>
