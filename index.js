@@ -13,12 +13,23 @@ function createWindow() {
         transparent: true,
         resizable: true,
         autoHideMenuBar: true,
+        //titleBarStyle: 'true',
+        thickFrame: true,
+        //titleBarOverlay: {
+        //    color: '#2f324100',
+        //    symbolColor: '#74b1be',
+        //    height: 30
+        //},
+        transparent: true,
         backgroundMaterial: 'acrylic'
     });
-
     win.loadFile('index.html');
-    win.webContents.openDevTools();
-    win.once('ready-to-show', () => win.show());
+    //win.webContents.openDevTools();
+    win.once('ready-to-show', () => {
+        win.show();
+        // Force a redraw
+        win.setSize(win.getSize()[0], win.getSize()[1] + 1);
+    });
 }
 
 app.whenReady().then(() => {
