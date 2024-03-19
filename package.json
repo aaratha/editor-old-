@@ -4,12 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-      "start": "electron ."
+    "start": "electron ."
+  },
+  "build": {
+    "appId": "com.example.yourapp",
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "electron-packager": "^17.1.2"
+  },
+  "devDependencies": {
     "electron": "^29.1.4"
   }
 }
