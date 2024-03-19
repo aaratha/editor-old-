@@ -1,3 +1,7 @@
+const { ipcMain, dialog, ipcRenderer } = require('electron');
+const fs = require('fs');
+
+
 let mode = 'normal';
 
 const editor = document.getElementById('editor');
@@ -66,6 +70,19 @@ document.addEventListener('keydown', (event) => {
         if (currentLine) {
             toggleChildren(currentLine);
         }
+    }
+    if (event.ctrlKey && event.key === 's') {
+        event.preventDefault();
+        const editorContent = document.getElementById('editor').innerHTML;
+        ipcRenderer.send('request-save-dialog', editorContent);
+    }
+    if (event.ctrlKey && event.key === 'o') {
+        event.preventDefault();
+        ipcRenderer.send('open-file-dialog');
+        ipcRenderer.on('file-opened', (event, content) => {
+            const editor = document.getElementById('editor');
+            editor.innerHTML = content; // Replace the editor content
+        });
     }
 });
 
