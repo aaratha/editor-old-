@@ -1,4 +1,4 @@
-const { app, BrowserWindow, globalShortcut, ipcMain, dialog } = require('electron');
+const { app, BrowserWindow, globalShortcut, ipcMain, dialog, Menu } = require('electron');
 const fs = require('fs');
 let win; // Make the window object accessible outside createWindow
 
@@ -90,3 +90,31 @@ ipcMain.on('open-file-dialog', (event) => {
         console.error('Failed to show open dialog:', err);
     });
 });
+
+const isMac = process.platform === 'darwin';
+
+const template = [
+  // Use isMac to conditionally add items specific to macOS
+  ...(isMac ? [{ role: 'appMenu' }] : []),
+  {
+    label: 'File',
+    submenu: [
+      { role: 'quit' }
+    ]
+  },
+  {
+    label: 'Edit',
+    submenu: [
+      { role: 'undo' },
+      { role: 'redo' },
+      { type: 'separator' },
+      { role: 'cut' },
+      { role: 'copy' },
+      { role: 'paste' }
+    ]
+  },
+  // Add more menus as needed
+];
+
+const menu = Menu.buildFromTemplate(template);
+Menu.setApplicationMenu(menu);
