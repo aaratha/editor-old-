@@ -8,7 +8,7 @@
         display: none;
       }
       .current-line {
-        background-color: rgba(255, 255, 255, 0.13);
+        background-color: rgba(255, 255, 255, 0.075);
         border-radius: 5px;
       }
 
@@ -20,11 +20,7 @@
         margin: 0;
         padding: 0;
         font-family: JetBrainsMono Nerd Font;
-        background-color: linear-gradient(
-          180deg,
-          rgba(16, 70, 67, 0.158) 0%,
-          rgba(0, 0, 0, 0.575) 100%
-        );
+        background-color: #0929243d;
         height: calc(100dvh);
         overflow: hidden;
       }
@@ -50,10 +46,10 @@
       #editor {
         z-index: 2;
         padding: 10px;
-        color: rgb(100, 255, 216);
+        color: rgba(159, 255, 231, 0.582);
         outline: rgb(1, 153, 255) solid 0px;
         box-shadow: 0 0 0px 40px rgba(0, 0, 0, 0.24); /* Soft glow effect */
-        height: 91vh;
+        height: calc(100dvh - 55px); /* Height of the editor */
         border-radius: 10px;
         overflow: scroll;
       }
@@ -64,7 +60,7 @@
         padding: 0;
         -webkit-app-region: drag;
         height: 30px;
-        margin-left: 0px;
+        margin-left: 2px;
         top: 0;
         transform: translateY(-5px);
       }
@@ -83,11 +79,11 @@
         background-color: rgb(0, 0, 0, 0);
         color: rgba(255, 255, 255, 0.61);
         font-size: 14px;
-        height: 24px;
-        width: 80px;
+        height: 30px;
+        width: 70px;
         border: none;
         border-radius: 5px;
-        margin: auto;
+        margin-top: 5px;
       }
       #header button:hover {
         background-color: rgba(255, 255, 255, 0.13);

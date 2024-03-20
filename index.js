@@ -10,7 +10,6 @@ function createWindow() {
             nodeIntegration: true, // Consider using contextIsolation and preload scripts for security
             contextIsolation: false,
         },
-        transparent: true,
         resizable: true,
         autoHideMenuBar: true,
         //titleBarStyle: 'true',
@@ -20,7 +19,6 @@ function createWindow() {
         //    symbolColor: '#74b1be',
         //    height: 30
         //},
-        transparent: true,
         backgroundMaterial: 'acrylic'
     });
     win.loadFile('index.html');
