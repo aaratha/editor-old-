@@ -1,0 +1,14 @@
+* test line
+** test line
+
+* [[*soc260 R Week 8]]
++ The state and the market; politics and economy
++ Modernization from agrarian society to industrial capitalism
++ Co-evolution of *democracy* and *capitalism*
++ Globalization and neoliberal doctrines: The role of the sate and challenges to democray
++ =Wolfgang Streeck, The crisis of democratic capitalism (2011)=
+  + Basic tension between democracy and capitalism
+  + Markets versus voters
+    + A basic tension in the political-economic configuration of advanced capitalist societies
+    + The bourgeoisie and the political right: Protection of markets and private property free from discretionary political interference; Fears of majority rule (the rule of the poor over the rich, elimination of private property and free markets)
++ /The crisis of democratic capitalism/
